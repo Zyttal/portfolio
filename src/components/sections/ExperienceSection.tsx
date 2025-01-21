@@ -6,42 +6,52 @@ const ExperienceSection = () => {
   const [selectedId, setSelectedId] = useState(experiences[0].id);
 
   return (
-    <section id='experience' className="bg-primaryBlack relative h-screen flex items-center justify-center overflow-hidden">
+    <section id='experience' className="bg-primaryBlack relative min-h-screen flex items-center justify-center">
       {/* Main content */}
-      <div className="relative w-full max-w-[1920px] px-24 pt-32">
-        <div className="grid grid-cols-[400px_1fr]"> {/* Removed gap */}
+      <div className="container mx-auto px-4 lg:px-8 py-20 max-w-[1600px]">
+        <div className="grid grid-cols-1 lg:grid-cols-[350px_1fr] gap-8 lg:gap-12">
           {/* Left Column */}
           <div className="w-full">
-            <h2 className="text-6xl font-bold text-white mb-20">Experience</h2> {/* Changed text color to white */}
+            <h2 className="text-4xl lg:text-5xl font-bold text-white mb-12">Experience</h2>
 
             <div className="flex flex-col w-full">
-              {experiences.map((exp) => (
-                <div
+              {experiences.map((exp, index) => (
+                <motion.div
                   key={exp.id}
-                  className={`flex items-center cursor-pointer group text-3xl py-12 px-8 w-full
-                  border-l-4 transition-all duration-300 ease-in-out
-                  ${selectedId === exp.id
-                      ? 'border-white border-opacity-100 border-b-4'
-                      : 'border-white border-opacity-20' 
+                  initial={{ opacity: 0, y: 20 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  viewport={{ once: true }}
+                  transition={{ duration: 0.5, delay: index * 0.1 }}
+                  className={`flex items-center cursor-pointer group text-xl lg:text-2xl py-8 px-6 w-full
+                    border-l-4 transition-all duration-300 ease-in-out
+                    ${selectedId === exp.id
+                      ? 'border-white border-opacity-100'
+                      : 'border-white border-opacity-20 hover:border-opacity-50'
                     }`}
                   onClick={() => setSelectedId(exp.id)}
                 >
                   <span className={`transition-all duration-300 ease-in-out
-                  ${selectedId === exp.id
-                      ? 'text-white font-medium drop-shadow-lg translate-x-2' 
-                      : 'text-white/40 drop-shadow-none translate-x-0' 
+                    ${selectedId === exp.id
+                      ? 'text-white font-medium translate-x-2'
+                      : 'text-white/40 group-hover:text-white/60 translate-x-0'
                     }`}
                   >
                     {exp.company}
                   </span>
-                </div>
+                </motion.div>
               ))}
             </div>
           </div>
 
           {/* Right Column */}
-          <div className="w-full pl-24">
-            <div className="relative h-[500px]">
+          <motion.div
+            className="w-full lg:pl-12"
+            initial={{ opacity: 0, x: 50 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.8, delay: 0.3 }}
+          >
+            <div className="relative min-h-[400px]">
               {experiences.map((exp) => (
                 exp.id === selectedId && (
                   <motion.div
@@ -50,14 +60,14 @@ const ExperienceSection = () => {
                     animate={{ opacity: 1, y: 0 }}
                     exit={{ opacity: 0, y: -20 }}
                     transition={{ duration: 0.5 }}
-                    className="absolute top-0 left-0 w-full"
+                    className="w-full"
                   >
-                    <h3 className="text-6xl font-bold text-white mb-4">{exp.title}</h3>
-                    <h4 className="text-4xl text-white mb-2">{exp.company}</h4> 
-                    <p className="text-2xl italic text-white/60 mb-8">{exp.duration}</p> 
+                    <h3 className="text-4xl lg:text-5xl font-bold text-white mb-4">{exp.title}</h3>
+                    <h4 className="text-2xl lg:text-3xl text-white mb-2">{exp.company}</h4>
+                    <p className="text-xl lg:text-2xl italic text-white/60 mb-8">{exp.duration}</p>
                     <div className="space-y-6">
                       {exp.description.map((point, index) => (
-                        <div key={index} className="flex gap-4 lg:text-4xl leading-relaxed">
+                        <div key={index} className="flex gap-4 text-lg lg:text-xl xl:text-2xl leading-relaxed">
                           <p className="text-white">{point}</p>
                         </div>
                       ))}
@@ -66,7 +76,7 @@ const ExperienceSection = () => {
                 )
               ))}
             </div>
-          </div>
+          </motion.div>
         </div>
       </div>
     </section>

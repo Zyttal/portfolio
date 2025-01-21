@@ -26,7 +26,9 @@ export const HomePageHeader = () => {
           }
         });
       },
-      { threshold: 0.6 }
+      {
+        threshold: 0.6,
+      }
     )
 
     const sections = document.querySelectorAll("section[id]");
@@ -43,17 +45,18 @@ export const HomePageHeader = () => {
     }
   }
 
-  return <header className={`w-full py-4 fixed top-0 z-50 transition-all duration-300 ease-in-out
-        ${scrolled ? 'bg-white shadow-lg' : 'bg-transparent'}`}>
+  return <header className={`w-full py-2 fixed top-0 z-50 transition-all duration-300 ease-in-out
+    ${scrolled || activeSection === 'experience' ? 'bg-white shadow-lg' : 'bg-transparent'}`}>
     <div className='w-full px-6 sm:px-6 lg:px-12 py-4 flex items-center justify-between'>
       <div className='flex items-center'>
         <Image
-          src={scrolled ? black_logo : white_logo}
+          src={scrolled || activeSection === 'experience' ? black_logo : white_logo}
           alt={"Icon"}
           width={50}
           className="transition-opacity duration-300 ease-in-out"
         />
-        <div className={`ml-8 font-bold transition-colors duration-300 ease-in-out text-lg ${scrolled ? 'text-primaryBlack' : 'text-primaryWhite'}`}>
+        <div className={`ml-8 font-bold transition-colors duration-300 ease-in-out text-lg 
+      ${scrolled || activeSection === 'experience' ? 'text-primaryBlack' : 'text-primaryWhite'}`}>
           <p>Dev</p>
           <p>Zyttal</p>
         </div>
@@ -65,13 +68,13 @@ export const HomePageHeader = () => {
           <button
             key={section}
             onClick={() => scrollToSection(section)}
-            className={`text-2xl font-bold px-4 py-2 transition-all ${scrolled
-                ? activeSection === section
-                  ? "drop-shadow-lg"
-                  : "text-primaryBlack"
-                : activeSection === section
-                  ? "drop-shadow-lg"
-                  : "text-primaryWhite"
+            className={`text-xl font-bold px-4 py-2 transition-all ${scrolled || activeSection === 'experience'
+              ? activeSection === section
+                ? "scale-110 drop-shadow-lg shadow-black"
+                : "text-primaryBlack"
+              : activeSection === section
+                ? "scale-110 drop-shadow-lg shadow-black"
+                : "text-primaryWhite"
               }`}
           >
             {section.charAt(0).toUpperCase() + section.slice(1)}

@@ -11,11 +11,11 @@ export const AboutSection = () => {
             viewport={{ once: true }}
             transition={{ duration: 0.5 }}
           >
-            <h2 className="text-6xl font-bold text-primaryBlack">About</h2>
+            <h2 className="text-4xl font-bold text-primaryBlack">About</h2>
             <motion.div
               className="h-1 bg-primaryBlack mt-4 w-32"
               initial={{ width: 0 }}
-              whileInView={{ width: 175 }}
+              whileInView={{ width: 125 }}
               viewport={{ once: true }}
               transition={{ delay: 0.3, duration: 0.5 }}
             />
@@ -24,7 +24,7 @@ export const AboutSection = () => {
 
         <div className="space-y-12 max-w-[60%]">
           <motion.p
-            className="text-4xl font-normal text-primaryBlack/90 leading-relaxed"
+            className="text-3xl font-normal text-primaryBlack/90 leading-relaxed"
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
@@ -34,7 +34,7 @@ export const AboutSection = () => {
           </motion.p>
 
           <motion.p
-            className="text-4xl font-normal text-primaryBlack/90 leading-relaxed"
+            className="text-3xl font-normal text-primaryBlack/90 leading-relaxed"
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
@@ -44,7 +44,7 @@ export const AboutSection = () => {
           </motion.p>
 
           <motion.p
-            className="text-4xl font-normal text-primaryBlack/90 leading-relaxed"
+            className="text-3xl font-normal text-primaryBlack/90 leading-relaxed"
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}

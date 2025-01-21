@@ -8,6 +8,7 @@ import ParticlesComponent from "../components/ui/ParticleBackground";
 import { AboutSection } from "@/components/sections/AboutSection";
 import { HeroSection } from "@/components/sections/HeroSection";
 import ExperienceSection from "@/components/sections/ExperienceSection";
+import ProjectsSection from "@/components/sections/ProjectsSection";
 
 export default function Home() {
 
@@ -17,6 +18,7 @@ export default function Home() {
       <HeroSection/>
       <AboutSection/>
       <ExperienceSection/>
+      <ProjectsSection/>
     </main>
   );
 }
