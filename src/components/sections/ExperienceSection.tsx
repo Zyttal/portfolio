@@ -8,13 +8,13 @@ const ExperienceSection = () => {
   return (
     <section id='experience' className="bg-primaryBlack relative min-h-screen flex items-center justify-center">
       {/* Main content */}
-      <div className="container mx-auto px-4 lg:px-8 py-20 max-w-[1600px]">
+      <div className="container mx-auto px-8 lg:px-8 max-w-[1600px] py-12">
         <div className="grid grid-cols-1 lg:grid-cols-[350px_1fr] gap-8 lg:gap-12">
           {/* Left Column */}
           <div className="w-full">
-            <h2 className="text-4xl lg:text-5xl font-bold text-white mb-12">Experience</h2>
+            <h2 className="text-4xl lg:text-5xl font-bold text-white mb-4 lg:mb-12">Experience</h2>
 
-            <div className="flex flex-col w-full">
+            <div className="flex flex-row lg:flex-col w-full overflow-x-auto">
               {experiences.map((exp, index) => (
                 <motion.div
                   key={exp.id}
@@ -22,18 +22,19 @@ const ExperienceSection = () => {
                   whileInView={{ opacity: 1, y: 0 }}
                   viewport={{ once: true }}
                   transition={{ duration: 0.5, delay: index * 0.1 }}
-                  className={`flex items-center cursor-pointer group text-xl lg:text-2xl py-8 px-6 w-full
-                    border-l-4 transition-all duration-300 ease-in-out
-                    ${selectedId === exp.id
+                  className={`flex items-center cursor-pointer group text-xl lg:text-2xl py-8 px-6
+        whitespace-nowrap flex-shrink-0 lg:flex-shrink
+        lg:border-l-4 border-b-4 lg:border-b-0 transition-all duration-300 ease-in-out
+        ${selectedId === exp.id
                       ? 'border-white border-opacity-100'
                       : 'border-white border-opacity-20 hover:border-opacity-50'
                     }`}
                   onClick={() => setSelectedId(exp.id)}
                 >
                   <span className={`transition-all duration-300 ease-in-out
-                    ${selectedId === exp.id
-                      ? 'text-white font-medium translate-x-2'
-                      : 'text-white/40 group-hover:text-white/60 translate-x-0'
+        ${selectedId === exp.id
+                      ? 'text-white font-medium lg:translate-x-2'
+                      : 'text-white/40 group-hover:text-white/60 lg:translate-x-0'
                     }`}
                   >
                     {exp.company}
