@@ -1,36 +1,68 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# My Portfolio
 
-## Getting Started
+## 🚀 Overview
+Welcome to my portfolio website! This project showcases my skills, projects, and experience as a developer. Built with React and Next.js, it demonstrates my proficiency in modern web development technologies.
 
-First, run the development server:
+## 🛠️ Built With
+- **React** - Frontend library
+- **Next.js** - React framework
+- **Tailwind CSS** - Styling
+- **Framer Motion** - Animations
+- **TypeScript** - Type safety
+- **Vercel** - Deployment
+
+## 🚀 Getting Started
 
 ```bash
+# Clone the repository
+git clone https://github.com/yourusername/portfolio.git
+
+# Navigate to the project
+cd portfolio
+
+# Install dependencies
+npm install
+
+# Run development server
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Open [http://localhost:3000](http://localhost:3000) in your browser to see the result.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+<!-- ## 📱 Screenshots -->
+<!-- ![Portfolio Homepage](/path/to/screenshot1.png)
+![Projects Page](/path/to/screenshot2.png) -->
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+<!-- ## 🔎 Development Notes
 
-## Learn More
+### Page Performance
+- Implemented dynamic imports for better code splitting
+- Optimized images using Next.js Image component
+- Configured caching strategies for static assets
+- Minimized bundle size through tree shaking
 
-To learn more about Next.js, take a look at the following resources:
+### SEO Optimization
+- Added meta tags for better search engine visibility
+- Implemented dynamic sitemap generation
+- Configured robots.txt
+- Added structured data for rich snippets
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+### Accessibility
+- ARIA labels implemented throughout
+- Keyboard navigation support
+- Color contrast compliance
+- Screen reader optimized content structure -->
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+## 📫 Contact
+- Website: [zyttal-portfolio.vercel.app](https://your-website.com)
+- GitHub: [@Zyttal](https://github.com/Zyttal)
+- LinkedIn: [Zharlaw Calimpon](https://www.linkedin.com/in/zharlaw-calimpon-734384209/)
+- Email: zharlaw@example.com
 
-## Deploy on Vercel
+## 🙏 Acknowledgments
+- Thanks to [Vercel](https://vercel.com) for hosting
+- Icons provided by [React Icons](https://react-icons.github.io/react-icons/)
+- Design inspiration from [Dribbble](https://dribbble.com)
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+---
+⭐️ From [Zyttal](https://github.com/Zyttal)
