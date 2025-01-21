@@ -30,7 +30,7 @@ export const AboutSection = () => {
             viewport={{ once: true }}
             transition={{ delay: 0.2, duration: 0.5 }}
           >
-            My full Name is <span className="font-semibold">Zharlaw Calimpon</span>. I'm a Full Stack Developer in Cebu. I'm very passionate with everything that makes the internet work.
+            My full Name is <span className="font-semibold">Zharlaw Calimpon</span>. I&apos;m a Full Stack Developer in Cebu. I&apos;m very passionate with everything that makes the internet work.
           </motion.p>
 
           <motion.p

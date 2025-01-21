@@ -1,5 +1,6 @@
+import { Experience } from "@/interfaces/experience";
+
 export const experiences: Experience[] = [
-  
   {
     id: "rbdil",
     company: "RBDIL",

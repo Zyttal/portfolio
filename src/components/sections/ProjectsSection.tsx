@@ -1,9 +1,8 @@
-import { useState } from 'react';
 import { motion } from 'framer-motion';
 import { projects } from '@/data/projects';
 
 export default function ProjectsSection() {
-  const [hoveredProject, setHoveredProject] = useState<number | null>(null);
+  // const [hoveredProject, setHoveredProject] = useState<number | null>(null);
 
   return (
     
@@ -23,8 +22,8 @@ export default function ProjectsSection() {
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5 }}
-              onMouseEnter={() => setHoveredProject(project.id)}
-              onMouseLeave={() => setHoveredProject(null)}
+              // onMouseEnter={() => setHoveredProject(project.id)}
+              // onMouseLeave={() => setHoveredProject(null)}
             >
               {/* Project Image */}
               <div className="relative h-48 overflow-hidden">

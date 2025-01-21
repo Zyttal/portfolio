@@ -3,13 +3,12 @@
 import Image from 'next/image';
 import white_logo from "../../../public/logos/white_logo.svg";
 import black_logo from "../../../public/logos/black_logo.svg";
-import Link from 'next/link';
 import { useEffect, useState } from 'react';
 
 export const HomePageHeader = () => {
   const [scrolled, setScrolled] = useState(false);
   const [activeSection, setActiveSection] = useState<string>("about");
-  const [menuOption, setMenuOpen] = useState(false);
+  // const [menuOption, setMenuOpen] = useState(false);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -41,7 +40,7 @@ export const HomePageHeader = () => {
     const section = document.getElementById(id);
     if (section) {
       section.scrollIntoView({ behavior: 'smooth' });
-      setMenuOpen(false);
+      // setMenuOpen(false);
     }
   }
 

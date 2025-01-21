@@ -17,7 +17,7 @@ export default function ContactSection() {
             whileInView={{ y: 0, opacity: 1 }}
             transition={{ delay: 0.2, duration: 0.5 }}
           >
-            Let's Connect
+            Let&apos;s Connect
           </motion.h2>
           <motion.p
             className="text-gray-400 max-w-2xl mx-auto text-2xl"
@@ -25,7 +25,7 @@ export default function ContactSection() {
             whileInView={{ y: 0, opacity: 1 }}
             transition={{ delay: 0.3, duration: 0.5 }}
           >
-            I'm always open to discussing new projects, creative ideas, or opportunities to be part of your visions.
+            I&apos;m always open to discussing new projects, creative ideas, or opportunities to be part of your visions.
           </motion.p>
         </motion.div>
 
