@@ -7,6 +7,7 @@ export const projects: Project[] = [
       description: 'A multi-user system featuring student, SPED practitioner, and institution roles with role-based access control. Implemented on-device handwriting assessment using Euclidean Distance for real-time accuracy feedback. Integrated Computer Vision for practitioners to create custom "Connect the Dots" exercises. Features include student progress monitoring and Arduino-based haptic feedback through BLE communication.',
       technologies: ["React", "TypeScript", "Tailwind CSS", "Flutter", "Firebase", "Arduino", "BLE"],
       image: "https://res.cloudinary.com/dbwwffypj/image/upload/v1737460048/Portfolio/Projects/SULAT_dn1ob4.png",
+      link: "https://sulat-web-app.vercel.app/"
     },
     {
       id: 2,
