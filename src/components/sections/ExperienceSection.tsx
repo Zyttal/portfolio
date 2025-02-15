@@ -12,9 +12,9 @@ const ExperienceSection = () => {
         <div className="grid grid-cols-1 lg:grid-cols-[350px_1fr] gap-8 lg:gap-12">
           {/* Left Column */}
           <div className="w-full">
-            <h2 className="text-4xl lg:text-5xl font-bold text-white mb-4 lg:mb-12">Experience</h2>
+            <h2 className="text-4xl lg:text-4xl font-bold text-white mb-4 lg:mb-12">Experience</h2>
 
-            <div className="flex flex-row lg:flex-col w-full overflow-x-auto">
+            <div className="flex flex-row lg:flex-col w-full">
               {experiences.map((exp, index) => (
                 <motion.div
                   key={exp.id}
@@ -23,7 +23,7 @@ const ExperienceSection = () => {
                   viewport={{ once: true }}
                   transition={{ duration: 0.5, delay: index * 0.1 }}
                   className={`flex items-center cursor-pointer group text-xl lg:text-2xl py-8 px-6
-        whitespace-nowrap flex-shrink-0 lg:flex-shrink
+        lg:flex-shrink
         lg:border-l-4 border-b-4 lg:border-b-0 transition-all duration-300 ease-in-out
         ${selectedId === exp.id
                       ? 'border-white border-opacity-100'
@@ -63,9 +63,9 @@ const ExperienceSection = () => {
                     transition={{ duration: 0.5 }}
                     className="w-full"
                   >
-                    <h3 className="text-4xl lg:text-5xl font-bold text-white mb-4">{exp.title}</h3>
-                    <h4 className="text-2xl lg:text-3xl text-white mb-2">{exp.company}</h4>
-                    <p className="text-xl lg:text-2xl italic text-white/60 mb-8">{exp.duration}</p>
+                    <h3 className="text-3xl lg:text-4xl font-bold text-white mb-4">{exp.title}</h3>
+                    <h4 className="text-xl lg:text-2xl text-white mb-2">{exp.company}</h4>
+                    <p className="text-lg lg:text-xl italic text-white/60 mb-8">{exp.duration}</p>
                     <div className="space-y-6">
                       {exp.description.map((point, index) => (
                         <div key={index} className="flex gap-4 text-lg lg:text-xl xl:text-2xl leading-relaxed">

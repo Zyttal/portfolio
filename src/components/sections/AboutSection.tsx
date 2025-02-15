@@ -14,13 +14,7 @@ export const AboutSection = () => {
               transition={{ duration: 0.5 }}
             >
               <h2 className="text-3xl md:text-5xl font-bold text-primaryBlack">About</h2>
-              <motion.div
-                className="h-1 bg-primaryBlack mt-4 w-32"
-                initial={{ width: 0 }}
-                whileInView={{ width: 125 }}
-                viewport={{ once: true }}
-                transition={{ delay: 0.3, duration: 0.5 }}
-              />
+              
             </motion.div>
           </div>
 

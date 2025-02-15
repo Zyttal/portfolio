@@ -8,7 +8,7 @@ import { useEffect, useState } from 'react';
 export const HomePageHeader = () => {
   const [scrolled, setScrolled] = useState(false);
   const [activeSection, setActiveSection] = useState<string>("about");
-  // const [menuOption, setMenuOpen] = useState(false);
+  
 
   useEffect(() => {
     const handleScroll = () => {
@@ -40,11 +40,10 @@ export const HomePageHeader = () => {
     const section = document.getElementById(id);
     if (section) {
       section.scrollIntoView({ behavior: 'smooth' });
-      // setMenuOpen(false);
     }
   }
 
-  return <header className={`w-full py-2 fixed top-0 z-50 transition-all duration-300 ease-in-out
+  return <header className={`w-full fixed top-0 z-50 transition-all duration-300 ease-in-out
     ${scrolled || activeSection === 'experience' ? 'bg-white shadow-lg' : 'bg-transparent'}`}>
     <div className='w-full px-6 sm:px-6 lg:px-12 py-4 flex items-center justify-between'>
       <div className='flex items-center'>
@@ -54,7 +53,7 @@ export const HomePageHeader = () => {
           width={50}
           className="transition-opacity duration-300 ease-in-out"
         />
-        <div className={`ml-8 font-bold transition-colors duration-300 ease-in-out text-lg 
+        <div className={`ml-6 lg:ml-8 font-bold transition-colors duration-300 ease-in-out text-lg 
       ${scrolled || activeSection === 'experience' ? 'text-primaryBlack' : 'text-primaryWhite'}`}>
           <p>Dev</p>
           <p>Zyttal</p>
@@ -67,7 +66,7 @@ export const HomePageHeader = () => {
           <button
             key={section}
             onClick={() => scrollToSection(section)}
-            className={`text-xl font-bold px-4 py-2 transition-all ${scrolled || activeSection === 'experience'
+            className={`text-lg font-bold px-4 py-2 transition-all ${scrolled || activeSection === 'experience'
               ? activeSection === section
                 ? "scale-110 drop-shadow-lg shadow-black"
                 : "text-primaryBlack"

@@ -6,7 +6,7 @@ export default function ProjectsSection() {
     <section id='projects' className="bg-primaryWhite relative min-h-screen w-full flex items-center justify-center">
       <div className="container mx-auto px-4 lg:px-8 max-w-[1600px] py-12">
         <div className="mb-12 px-4">
-          <h2 className="text-4xl lg:text-5xl font-bold">Projects</h2>
+          <h2 className="text-4xl lg:text-4xl font-bold">Projects</h2>
         </div>
 
         {/* Projects Grid */}
