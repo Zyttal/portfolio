@@ -54,7 +54,7 @@ Open [http://localhost:3000](http://localhost:3000) in your browser to see the r
 - Screen reader optimized content structure -->
 
 ## 📫 Contact
-- Website: [zyttal-portfolio.vercel.app](https://your-website.com)
+- Website: [zyttal.github.io](https://zyttal.github.io/Portfolio/)
 - GitHub: [@Zyttal](https://github.com/Zyttal)
 - LinkedIn: [Zharlaw Calimpon](https://www.linkedin.com/in/zharlaw-calimpon-734384209/)
 - Email: zharlaw@example.com
