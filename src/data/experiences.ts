@@ -2,18 +2,28 @@ import { Experience } from "@/interfaces/experience";
 
 export const experiences: Experience[] = [
   {
+    id: "raykan2",
+    company: "Raykan",
+    title: "Data Science Researcher",
+    duration: "November 2023 - June 2024",
+    description: [
+      "Designed and developed Proof of Concepts (PoCs) for OCR and document extraction through Generative AI models.",
+      "Automated lead generation by scraping data from various websites using Selenium, then analyzed and visualized industry trends using Power BI.",
+      "Proposed and presented an SQL AI Agent that generates SQL Queries from natural language with a focus for non-technical individuals."]
+  },
+  {
     id: "rbdil",
     company: "RBDIL",
     title: "Software Developer",
-    duration: "July 2024 - Present",
+    duration: "July 2024 - December 2024",
     description: [
-      "I represented the SCS Department in facilitating requirements gathering and proposing feasible solutions to the research problem assigned.",
-      "I maintained continuous communication with the client, ensuring one-to-one alignments with their requirements through feedbacks and clarifications.",
-      "I presented practical and viable outcomes based on the refined requirements."
+      "Represented the SCS Department in facilitating requirements gathering and proposing feasible solutions to the research problem assigned.",
+      "Maintained continuous communication with the client, ensuring one-to-one alignments with their requirements through feedbacks and clarifications.",
+      "Presented practical and viable outcomes based on the refined requirements."
     ]
   },
   {
-    id: "raykan",
+    id: "raykan1",
     company: "Raykan",
     title: "QA Engineer Intern",
     duration: "November 2023 - June 2024",
@@ -21,13 +31,5 @@ export const experiences: Experience[] = [
       "I contributed to the documentation for the underlying functions for the assigned project's system.",
       "I conducted end-to-end (E2E) testing using Cypress in an agile environment, ensuring alignment with client requirements and documenting findings through detailed test reports.",
       "I performed load testing using JMeter on the test environments of the assigned project hosted on AWS, identifying performance bottlenecks through the use of AWS Metrics and providing actionable insights."]
-  },
-  {
-    id: "usj-r",
-    company: "USJ-R",
-    title: "Bachelor of Science in Computer Science",
-    duration: "August 2021 - June 2025",
-    description: ["I specialized in Mobile Application Development and Artificial Intelligence, with hands-on experience in building mobile solutions and applying AI concepts through academic projects and coursework."
-    ]
   }
 ];
