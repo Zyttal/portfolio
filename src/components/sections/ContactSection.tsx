@@ -34,7 +34,7 @@ export default function ContactSection() {
           {/* Email */}
           <motion.a
             href="mailto:zharlaw@gmail.com"
-            className="flex flex-col items-center p-6 sm:p-8 md:p-10 lg:p-12 bg-primaryWhite rounded-lg hover:bg-opacity-90 shadow-lg hover:shadow-2xl transition-all duration-300 hover:-translate-y-2 border border-gray-800 hover:border-primaryBlack"
+            className="flex flex-col items-center p-6 sm:p-8 md:p-10 lg:p-12 bg-primaryWhite rounded-lg hover:bg-opacity-90 shadow-lg hover:shadow-2xl transition-all hover:-translate-y-2 border border-gray-800 hover:border-primaryBlack"
             whileHover={{ scale: 1.02 }}
             initial={{ y: 20, opacity: 0 }}
             whileInView={{ y: 0, opacity: 1 }}
@@ -52,7 +52,7 @@ export default function ContactSection() {
             href="https://github.com/Zyttal"
             target="_blank"
             rel="noopener noreferrer"
-            className="flex flex-col items-center p-6 sm:p-8 md:p-10 lg:p-12 bg-primaryWhite rounded-lg hover:bg-opacity-90 shadow-lg hover:shadow-2xl transition-all duration-300 hover:-translate-y-2 border border-gray-800 hover:border-primaryBlack"
+            className="flex flex-col items-center p-6 sm:p-8 md:p-10 lg:p-12 bg-primaryWhite rounded-lg hover:bg-opacity-90 shadow-lg hover:shadow-2xl transition-all hover:-translate-y-2 border border-gray-800 hover:border-primaryBlack"
             whileHover={{ scale: 1.02 }}
             initial={{ y: 20, opacity: 0 }}
             whileInView={{ y: 0, opacity: 1 }}
