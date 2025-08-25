@@ -1,4 +1,4 @@
-# My Portfolio
+# My portfolio
 
 ## 🚀 Overview
 Welcome to my portfolio website! This project showcases my skills, projects, and experience as a developer. Built with React and Next.js, it demonstrates my proficiency in modern web development technologies.
@@ -15,7 +15,7 @@ Welcome to my portfolio website! This project showcases my skills, projects, and
 
 ```bash
 # Clone the repository
-git clone https://github.com/yourusername/portfolio.git
+git clone https://github.com/Zyttal/portfolio.git
 
 # Navigate to the project
 cd portfolio
