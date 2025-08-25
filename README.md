@@ -1,68 +1,69 @@
-# My Portfolio
+# React + TypeScript + Vite
 
-## 🚀 Overview
-Welcome to my portfolio website! This project showcases my skills, projects, and experience as a developer. Built with React and Next.js, it demonstrates my proficiency in modern web development technologies.
+This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
 
-## 🛠️ Built With
-- **React** - Frontend library
-- **Next.js** - React framework
-- **Tailwind CSS** - Styling
-- **Framer Motion** - Animations
-- **TypeScript** - Type safety
-- **Vercel** - Deployment
+Currently, two official plugins are available:
 
-## 🚀 Getting Started
+- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
+- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
 
-```bash
-# Clone the repository
-git clone https://github.com/yourusername/portfolio.git
+## Expanding the ESLint configuration
 
-# Navigate to the project
-cd portfolio
+If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
 
-# Install dependencies
-npm install
+```js
+export default tseslint.config([
+  globalIgnores(['dist']),
+  {
+    files: ['**/*.{ts,tsx}'],
+    extends: [
+      // Other configs...
 
-# Run development server
-npm run dev
+      // Remove tseslint.configs.recommended and replace with this
+      ...tseslint.configs.recommendedTypeChecked,
+      // Alternatively, use this for stricter rules
+      ...tseslint.configs.strictTypeChecked,
+      // Optionally, add this for stylistic rules
+      ...tseslint.configs.stylisticTypeChecked,
+
+      // Other configs...
+    ],
+    languageOptions: {
+      parserOptions: {
+        project: ['./tsconfig.node.json', './tsconfig.app.json'],
+        tsconfigRootDir: import.meta.dirname,
+      },
+      // other options...
+    },
+  },
+])
 ```
 
-Open [http://localhost:3000](http://localhost:3000) in your browser to see the result.
+You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
 
-<!-- ## 📱 Screenshots -->
-<!-- ![Portfolio Homepage](/path/to/screenshot1.png)
-![Projects Page](/path/to/screenshot2.png) -->
+```js
+// eslint.config.js
+import reactX from 'eslint-plugin-react-x'
+import reactDom from 'eslint-plugin-react-dom'
 
-<!-- ## 🔎 Development Notes
-
-### Page Performance
-- Implemented dynamic imports for better code splitting
-- Optimized images using Next.js Image component
-- Configured caching strategies for static assets
-- Minimized bundle size through tree shaking
-
-### SEO Optimization
-- Added meta tags for better search engine visibility
-- Implemented dynamic sitemap generation
-- Configured robots.txt
-- Added structured data for rich snippets
-
-### Accessibility
-- ARIA labels implemented throughout
-- Keyboard navigation support
-- Color contrast compliance
-- Screen reader optimized content structure -->
-
-## 📫 Contact
-- Website: [zyttal.github.io](https://zyttal.github.io/Portfolio/)
-- GitHub: [@Zyttal](https://github.com/Zyttal)
-- LinkedIn: [Zharlaw Calimpon](https://www.linkedin.com/in/zharlaw-calimpon-734384209/)
-- Email: zharlaw@example.com
-
-## 🙏 Acknowledgments
-- Thanks to [Vercel](https://vercel.com) for hosting
-- Icons provided by [React Icons](https://react-icons.github.io/react-icons/)
-- Design inspiration from [Dribbble](https://dribbble.com)
-
----
-⭐️ From [Zyttal](https://github.com/Zyttal)
+export default tseslint.config([
+  globalIgnores(['dist']),
+  {
+    files: ['**/*.{ts,tsx}'],
+    extends: [
+      // Other configs...
+      // Enable lint rules for React
+      reactX.configs['recommended-typescript'],
+      // Enable lint rules for React DOM
+      reactDom.configs.recommended,
+    ],
+    languageOptions: {
+      parserOptions: {
+        project: ['./tsconfig.node.json', './tsconfig.app.json'],
+        tsconfigRootDir: import.meta.dirname,
+      },
+      // other options...
+    },
+  },
+])
+```
